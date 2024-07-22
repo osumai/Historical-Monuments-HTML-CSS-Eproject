@@ -1,0 +1,523 @@
+ /* Import fonts css file to use webfontss on the site */
+@import url("fonts.css");
+/* Rules to be used for mobile phone with a maximum screen width of 480px*/
+@import url("mobile.css") screen and (max-width:480px);
+/* Rules to be used for mobile phone with a minimum screen width of 481px*/
+@import url("tablet.css") screen and (min-width:481px);
+/* Rules to be used for mobile phone with a minimum screen width of 481px*/
+@import url("desktop.css") screen and (min-width:801px);
+
+
+/*Reset the default browser sizing, margin and padding*/
+:root
+{
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	-o-box-sizing:border-box;
+	box-sizing:border-box;
+}
+
+*, *::before, *::after
+{
+margin: 0px;
+padding: 0px;
+box-sizing: border-box;
+}
+
+.page-heading-anchor{
+	 text-align:left;
+	font-size: 0.9em;
+	font-weight: 800;
+	letter-spacing: 2px;
+	color: #BC412B;
+	font-family: 'kaushan_scriptregular';
+}
+h1 
+{
+  text-align:justify;
+	font-size: 1.5em;
+	font-weight: 1000;
+	letter-spacing: 2px;
+	color: #BC412B;
+	font-family: 'kaushan_scriptregular';	
+}
+h2
+{
+  text-align:left;
+	font-size: 1.2em;
+	font-weight: 800;
+	letter-spacing: 2px;
+	color: #BC412B;
+	font-family: 'kaushan_scriptregular';	
+}
+h3
+{
+  text-align:left;
+	font-size: 0.9em;
+	font-weight: 900;
+	letter-spacing: 2px;
+	color: #05A8AA;
+	font-family: 'kaushan_scriptregular';	
+}
+p
+{	
+	text-align:justify;
+	color: #BC412B;
+	font-family: 'rubikregular';
+	font-style: normal;
+	font-weight: normal;}
+
+ul
+{	
+	text-align:justify;
+	color: #BC412B;
+	font-family: 'rubikregular';
+	font-style: normal;
+	font-weight: normal;}
+body
+{
+	background-color: #05A8AA;
+
+} 
+/*Style the page headers*/
+header
+	{
+		background:#d7b49e;
+		padding-left:1.5em;
+	}
+.slideshow
+	{
+		background:none;
+		padding-left:1.5em;
+	}
+
+/*Class to style the page headings*/
+.page-heading
+{
+	text-align: center;
+	color:#BC412B;
+	font-size: 2em;
+	font-weight: 1000;
+	font-family: 'kaushan_scriptregular';
+}
+
+
+/*ID selector to style the container div*/
+#container
+{
+	margin: 1% auto;
+	background-color:#b8d5b8;
+	padding-left: 2%;
+	padding-right: 2%;
+
+}
+
+/*Style the page footer*/
+.page-footer
+{
+	text-align:center;	
+	color:#dc602e;
+	text-decoration:none;
+}
+
+/*style brand logo*/
+
+.branding-logo
+{
+   color: #bc412b;
+   font-family: 'kaushan_scriptregular';
+   font-size: 30px;
+   text-decoration:none;
+   font-weight:1000;
+}
+
+
+/*style the menu*/
+.navbar
+{
+   display:contents;
+	align-content: center;
+   justify-content:center;
+   align-items:flex-start;
+
+}
+.menu
+{
+	display:flex;
+	flex-direction:row;
+	position: relative;
+}
+.menu li{list-style-type:none;}
+.menu li a
+{
+	display:block;
+	text-decoration:none;
+	color:#b8d5b8;
+	padding:1em 1.5em;
+	font-size:1.25rem;
+}
+	
+.menu>li>a, .submenu>li>a { font-size: 1.5rem; }
+
+.menu>li>a { color:darkgreen; }
+
+.submenu
+{
+   top: 0px;
+   padding-left: 1.5em;
+   border-left: 0.15em;
+}
+
+.submenu .submenu, .submenu .submenu .submenu
+{
+   left: 0;
+   right: 0;
+}
+
+.menu>li:hover>a + .submenu,  .submenu>li:hover>a + .submenu { position: relative; }
+
+
+.menu
+{ font-size: 1.2em;
+  text-transform: uppercase;
+  font-weight: 500;
+  width: 80px;
+  display:flex;
+  flex-direction:row;
+}
+
+.menu li { list-style: none; }
+.menu li a
+{
+   display: block;
+   text-decoration: none;
+   color: #DC602E;
+   padding: 1em 1.5em;
+   font-size: 1.25rem;
+}
+/* Style the submenus */
+
+.has-dropdown
+{
+   position: relative;
+   display: inline-block; 
+}
+
+.submenu
+{
+   position: absolute;
+   left: 0px;
+   background-color: var(--dark);
+   padding: 1.5em 0;
+   white-space: nowrap;
+   min-width: 15em;
+   /* hide the submenus initially */
+   opacity: 0;
+   transform: scaleY(0);
+   transform-origin: top center;
+   transition: all 200ms ease-in;
+}
+
+.submenu>li>a { padding: .4em 1.1em; }
+
+.submenu .submenu
+{
+   left: 100%;
+   top: -1.5em;
+}
+
+.submenu .submenu .submenu
+{
+   left: -80%;
+   top: -1.5em;
+}
+
+.menu > li:hover>a, .submenu>li:hover>a
+{
+   color: #B8D5B8;
+ background-color: #D7B49E;
+}
+
+.menu > li:hover>a { background-color: #D7B49E }
+	
+/* Arrows */
+.arrow
+{
+   width: .5em;
+   height: .5em;
+   display: inline-block;
+   vertical-align: middle;/* move the arrow to middle of the text */
+   border-left: 0.15em solid currentColor;
+   border-bottom: 0.15em solid currentColor;
+   transform: rotate(-135deg);
+   margin-top: -.25em;
+   transition: transform 250ms ease-in;
+}
+
+.submenu>li>a> .arrow .submenu>.submenu>li>a .arrow { transform: rotate(-45deg); }
+
+/* Reveal/show the submenus */
+.menu>li:hover>a + .submenu, .submenu>li:hover>a + .submenu
+{
+   opacity: 1;
+   transform: scaleY(1);
+}
+
+/* Animate menu and submenu arrows */
+.menu>li:hover>a> .arrow, .submenu>li:hover>a> .arrow { transform: rotate(315deg); }
+
+
+
+
+/* rules to be set when the device width is upto 1260px */
+@media screen and (max-width:78.75em) {
+
+.submenu .submenu .submenu
+{
+   left: 100%;
+   top: .5em;
+}
+
+/* change the width of the submenu */
+.submenu { min-width: 16em; }
+}
+
+/* rules to be set when the device width is upto 940px */
+@media screen and (max-width:58.75em) {
+
+.menu li a { font: 1rem; }
+}
+
+/* rules to be set when the device width is upto 800px */
+@media screen and (max-width:50em) {
+
+
+	
+.hamburger
+{
+   width: 2em;
+   height: 0.25em;
+   display: block;
+   background: #121212;
+   position: relative;
+   cursor: pointer;
+}
+
+.hamburger::after,  .hamburger::before
+{
+   content: "";
+   position: absolute;
+   left: 0;
+   background: inherit;
+   width: inherit;
+   height: inherit;
+   transition: .2s transform ease-out;
+}
+
+.hamburger::after { top: 0.7em; }
+
+.hamburger::before { bottom: 0.7em; }
+
+.close::after,  .close::before { top: 0px; }
+
+.close
+{
+   transform: rotate(45deg);
+   transition: .2s transform ease-out;
+}
+
+.close::before { display: none; }
+
+.close::after { transform: rotate(-90deg); }
+
+/* reveal the menu */
+input[type="checkbox"]:checked + .menu
+{
+   position: absolute;
+   opacity: 0;
+   transform: scaleY(1);
+}
+
+.panel-body
+{background-color:#000;}
+	
+	
+	
+/*Style the slideshow container*/
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  
+    position: relative;
+    max-width: 410px;
+    height: 730px;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: #121212;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #0B0A0A;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #0B0A0A;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #0B0A0A;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+}@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+	}
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+ 
+
+
+	
+/*style the Gallery*/
+
+/* The grid: Four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+  padding: 5px;
+}
+
+/* Style the images inside the grid */
+.column img {
+  opacity: 1;
+  cursor: pointer;
+  height: 155px;
+}
+
+.column img:hover {
+  opacity: 0.8;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The expanding image container (positioning is needed to position the close button and the text) */
+.container {
+  position:relative;
+  display: none;
+  width :50%
+}
+
+/* Expanding image text */
+#imgtext {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: white;
+  font-size: 20px;
+}
+
+/* Closable button inside the image */
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
+
+
+/*Style the map*/
+#locationMap
+{
+	margin-left: auto;
+	margin-right: auto;
+	border: #FFFFFF;
+	width: 500px;
+	height: 500px;
+}
+/*style the marquee tag*/
+ marquee {
+        width: 150%;
+		height: 50%;
+        padding:  0;
+        background-color: #05a8aa;
+      }
+/*Style the page links*/
+.links
+{
+	text-align:center;	
+	color:#dc602e;
+	text-decoration:none;
+}
